@@ -67,13 +67,13 @@
   	<target name="setup" depends="presetup" if="packageDNE">
   		<touch file="${dir.build.salesforce}/package.xml" mkdirs="true"/>
   		<echo file="${dir.build.salesforce}/package.xml"><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
-  		<Package xmlns='http://soap.sforce.com/2006/04/metadata'>
-			<types>
-		  		<members>assets.resource</members>
-		  		<name>StaticResource</name>
-		  	</types>
-		  	<version>23.0</version>
-		</Package>]]>
+<Package xmlns='http://soap.sforce.com/2006/04/metadata'>
+	<types>
+		<members>assets.resource</members>
+		<name>StaticResource</name>
+	</types>
+	<version>23.0</version>
+</Package>]]>
 		</echo>
   	</target>
 

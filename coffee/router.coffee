@@ -4,9 +4,9 @@ define([
   'jQueryUI',
   'Underscore', # lib/underscore/underscore
   'Backbone',    # lib/backbone/backbone
-  'views/tabsview'
+  'views/views'
 ], 
-($, ui, _, Backbone, TabsView) ->
+($, ui, _, Backbone, Views) ->
   class AppRouter extends Backbone.Router
     routes:
       "industry": "renderIndustryTab",
@@ -34,7 +34,7 @@ define([
     console.log "Calling initialize named function."
     app_router = new AppRouter
     Backbone.history.start()
-    tabs = new TabsView()
+    tabs = new Views.TabsView()
     tabs.render()
     app_router.navigate("#")
     undefined

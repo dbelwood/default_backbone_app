@@ -7,7 +7,7 @@
     child.__super__ = parent.prototype;
     return child;
   };
-  define(['jQuery', 'jQueryUI', 'Underscore', 'Backbone', 'views/tabsview'], function($, ui, _, Backbone, TabsView) {
+  define(['jQuery', 'jQueryUI', 'Underscore', 'Backbone', 'views/views'], function($, ui, _, Backbone, Views) {
     var AppRouter, initialize;
     AppRouter = (function() {
       __extends(AppRouter, Backbone.Router);
@@ -43,7 +43,7 @@
       console.log("Calling initialize named function.");
       app_router = new AppRouter;
       Backbone.history.start();
-      tabs = new TabsView();
+      tabs = new Views.TabsView();
       tabs.render();
       app_router.navigate("#");
       return;

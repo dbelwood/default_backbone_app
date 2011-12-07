@@ -1,5 +1,5 @@
 define([
-	'lib/views/tabsview'
+	'views/tabsview'
 ], function(TabsView) {
 	return {
 		TabsView: TabsView
